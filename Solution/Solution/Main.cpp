@@ -1,20 +1,23 @@
 #include <iostream>
 #include "InfixToPostFix.h"
 #include "Queue.h"
+#include <string>
+
 using namespace std;
 
 int main() {
-    string exp;
+    //infix to postfix example
+    string infix;
     cout << "Enter an infix expression: ";
-    getline(cin, exp);
-    if (!isBalanced(exp)) {
-        cout << "The expression is invalid." << endl;
+    getline(cin, infix);
+    if (!isBalanced(infix)) {
+        cout << "Invalid expression: unbalanced parentheses" << endl;
+        return 0;
     }
-    else {
-        string postfix = infixToPostfix(exp);
-        cout << "Postfix expression: " << postfix << endl;
-    }
-    
+    string postfix = infixToPostfix(infix);
+    cout << "Postfix expression: " << postfix << endl;
+
+    //Queue example
     Queue q;
     q.enqueue(10);
     q.enqueue(20);
@@ -24,5 +27,4 @@ int main() {
     cout << "Front element: " << q.peek() << endl;
     cout << "Queue size: " << q.getSize() << endl;
     return 0;
-
 }
