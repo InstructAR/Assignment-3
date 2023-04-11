@@ -15,7 +15,7 @@ int main() {
         return 0;
     }
     string postfix = infixToPostfix(infix);
-    cout << "Postfix expression: " << postfix << endl;
+    cout << "Postfix expression: " << postfix << endl << endl;
 
     //Queue example
     Queue q;
