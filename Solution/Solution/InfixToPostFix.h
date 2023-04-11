@@ -4,20 +4,14 @@
 
 using namespace std;
 
-// Function to check if a given character is an opening bracket
-bool isOpeningBracket(char c);
+// Function to check if a character is an operator
+bool isOperator(char c);
 
-// Function to check if a given character is a closing bracket
-bool isClosingBracket(char c);
-
-// Function to check if two brackets are matching
-bool isMatchingBracket(char opening, char closing);
-
-// Function to perform Balanced Parentheses Check
-bool isBalanced(string exp);
-
-// Function to get the precedence of an operator
+// Function to get operator precedence
 int getPrecedence(char op);
 
 // Function to convert infix expression to postfix expression
-string infixToPostfix(string exp);
+string infixToPostfix(string infix);
+
+// Function to check if the parentheses in an expression are balanced
+bool isBalanced(string expression);
